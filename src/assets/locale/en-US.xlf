@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="en-US">
+  <file id="ngi18n" original="ng.template">
+    <unit id="1636183032230265027">
+      <notes>
+        <note category="location">src/app/home/home.component.html:2</note>
+      </notes>
+      <segment>
+        <source>This is a test translation.</source>
+      </segment>
+    </unit>
+    <unit id="8740346448975840570">
+      <notes>
+        <note category="location">src/app/home/home.component.html:3</note>
+      </notes>
+      <segment>
+        <source>Test placeholder</source>
+      </segment>
+    </unit>
+    <unit id="8484960715628942602">
+      <notes>
+        <note category="location">src/app/home/home.component.html:4</note>
+      </notes>
+      <segment>
+        <source>This is test translation with ICU: <ph id="0" equiv="INTERPOLATION" disp="{{ title }}"/></source>
+      </segment>
+    </unit>
+    <unit id="6627569014174784169">
+      <notes>
+        <note category="location">src/app/home/home.component.html:8</note>
+      </notes>
+      <segment>
+        <source>Choose language</source>
+      </segment>
+    </unit>
+    <unit id="8197344119733685002">
+      <notes>
+        <note category="location">src/app/home/home.component.html:16,18</note>
+      </notes>
+      <segment>
+        <source> Englishy </source>
+      </segment>
+    </unit>
+    <unit id="3942647521041832637">
+      <notes>
+        <note category="location">src/app/home/home.component.html:23,25</note>
+      </notes>
+      <segment>
+        <source> Polish </source>
+      </segment>
+    </unit>
+    <unit id="7592072931748990003">
+      <notes>
+        <note category="location">src/app/home/home.component.html:30,32</note>
+      </notes>
+      <segment>
+        <source> German </source>
+      </segment>
+    </unit>
+    <unit id="8909326324754435888">
+      <notes>
+        <note category="location">src/app/home/home.component.html:37,39</note>
+      </notes>
+      <segment>
+        <source> Spanish </source>
+      </segment>
+    </unit>
+    <unit id="1486628788725214524">
+      <notes>
+        <note category="location">src/app/home/home.component.ts:12</note>
+        <note category="location">src/app/home/home.component.ts:13</note>
+      </notes>
+      <segment>
+        <source>HELLO</source>
+      </segment>
+    </unit>
+  </file>
+</xliff>

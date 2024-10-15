@@ -1,0 +1,11 @@
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+      "baseUrl": ".",
+      "types": ["node"],
+      "module": "CommonJS",
+      "noImplicitAny": false
+    },
+    "files": ["types/xliff.d.ts"]
+  }
+  
