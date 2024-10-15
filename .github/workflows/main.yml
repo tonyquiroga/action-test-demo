@@ -3,11 +3,11 @@ on: [push]
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: A job to say howdy
     steps:
       - name: Hello world action step
         id: hello
-        uses: tonyquiroga/action-test-demo@587ff8fac237c0c94549eb2dcd4ec57380116445
+        uses: tonyquiroga/action-test-demo
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
