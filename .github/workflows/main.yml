@@ -21,6 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "HOWDYYYY YALLL!"
+        uses: actions/checkout@v4
       - id: set_var
         run: |
           content=`cat howdy.json`
