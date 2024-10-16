@@ -23,7 +23,7 @@ jobs:
       - run: echo "HOWDYYYY YALLL!"
       - id: set_var
         run: |
-          content=`cat ./../../src/assets/locale/howdy.json`
+          content=`cat ./howdy.json`
           echo "::set-output name=howdyJson::$content"
       - run: |
           echo "${{fromJson(steps.set_var.outputs.howdyJson)}}"
