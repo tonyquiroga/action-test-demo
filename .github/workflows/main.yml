@@ -22,7 +22,7 @@ jobs:
     steps:
       - id: set_var
         uses: actions/checkout@v4
-        run: |
+      - run: |
             content=`cat howdy.json`
             echo "::set-output name=howdyJson::$content"
       - run: |
