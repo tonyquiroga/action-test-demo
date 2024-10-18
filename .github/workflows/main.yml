@@ -26,11 +26,10 @@ jobs:
       - run: ls ${{ github.workspace }}
       - id: another_var
         run: |
-            content=`cat src/assets/locale/howdy.json`
-            echo content
+            echo content=`cat src/assets/locale/howdy.json`
             echo "name=howdyJson" >> $GITHUB_OUTPUT
       - run: |
-          echo "${{fromJson(steps.another_var.outputs.name)}}"
+          echo "${{steps.another_var.outputs.name}}"
       
       # - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       # - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
