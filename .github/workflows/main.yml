@@ -22,7 +22,7 @@ jobs:
     steps:
       - run: echo "HOWDYYYY YALLL!"
       - id: set_var
-        uses: actions/checkout@v4
+        # uses: actions/checkout@v4
         run: echo "tony=Q" >> $GITHUB_OUTPUT
       # - run: ls ${{ github.workspace }}
       - run: |
