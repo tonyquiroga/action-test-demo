@@ -27,7 +27,7 @@ jobs:
         run: |
             echo `cat src/assets/locale/howdy.json`
             echo "name=howdyJson" >> $GITHUB_OUTPUT
-            echo "contents=(`cat src/assets/locale/howdy.json`)" >> $GITHUB_OUTPUT
+            echo "contents=$(cat src/assets/locale/howdy.json)" >> $GITHUB_OUTPUT
       - run: |
           echo "${{steps.another_var.outputs.name}}"
           echo "${{steps.another_var.outputs.contents}}"
