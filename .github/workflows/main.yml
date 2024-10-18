@@ -25,9 +25,9 @@ jobs:
         # uses: actions/checkout@v4
         run: echo "tony=Q" >> $GITHUB_OUTPUT
       # - run: ls ${{ github.workspace }}
-      - run: |
-            content=`cat src/assets/locale/howdy.json`
-            echo "name=content" >> $GITHUB_OUTPUT
+      # - run: |
+      #       content=`cat src/assets/locale/howdy.json`
+      #       echo "name=content" >> $GITHUB_OUTPUT
       # - name: Get color
       #   env:
       #     SELECTED_COLOR: ${{ steps.set_var.outputs.howdyJson }}
