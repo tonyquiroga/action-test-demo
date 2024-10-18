@@ -22,17 +22,15 @@ jobs:
     steps:
       - run: echo "HOWDYYYY YALLL!"
       - id: set_var
-        # uses: actions/checkout@v4
-        run: echo "tony=Q" >> $GITHUB_OUTPUT
-      # - run: ls ${{ github.workspace }}
-      # - run: |
-      #       content=`cat src/assets/locale/howdy.json`
-      #       echo "name=content" >> $GITHUB_OUTPUT
-      # - name: Get color
-      #   env:
-      #     SELECTED_COLOR: ${{ steps.set_var.outputs.howdyJson }}
+        uses: actions/checkout@v4
+      - run: ls ${{ github.workspace }}
+      - id: another_var
+        run: |
+            content=`cat src/assets/locale/howdy.json`
+            echo content
+            echo "name=howdyJson" >> $GITHUB_OUTPUT
       - run: |
-          echo "${{steps.set_var.outputs.tony}}"
+          echo "${{fromJson(steps.another_var.outputs.name)}}"
       
       # - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       # - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
