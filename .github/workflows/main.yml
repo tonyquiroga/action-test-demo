@@ -23,7 +23,7 @@ jobs:
       - run: echo "HOWDYYYY YALLL!"
       - id: set_var
         uses: actions/checkout@v4
-      - run: ls ${{ github.workspace }}
+      # - run: ls ${{ github.workspace }}
       - run: |
             content=`cat src/assets/locale/howdy.json`
             echo "name=content" >> $GITHUB_OUTPUT
