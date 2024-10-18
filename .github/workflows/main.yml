@@ -26,7 +26,7 @@ jobs:
       - run: ls ${{ github.workspace }}
       - run: |
             content=`cat src/assets/locale/howdy.json`
-            echo "::set-output name=howdyJson::$content"
+            echo "name=howdyJson" >> $GITHUB_OUTPUT
       - run: |
           echo "${{fromJson(steps.set_var.outputs.howdyJson)}}"
       
