@@ -20,16 +20,17 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "HOWDYYYY YALLL!"
       - id: set_var
         uses: actions/checkout@v4
       - run: ls ${{ github.workspace }}
       - id: another_var
         run: |
-            echo content=`cat src/assets/locale/howdy.json`
+            echo `cat src/assets/locale/howdy.json`
             echo "name=howdyJson" >> $GITHUB_OUTPUT
+            echo "contents=`cat src/assets/locale/howdy.json`" >> $GITHUB_OUTPUT
       - run: |
           echo "${{steps.another_var.outputs.name}}"
+          echo "${{steps.another_var.outputs.contents}}"
       
       # - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       # - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
