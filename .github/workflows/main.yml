@@ -25,7 +25,6 @@ jobs:
       - run: ls ${{ github.workspace }}
       - id: another_var
         run: |
-            echo `cat src/assets/locale/howdy.json`
             echo "name=howdyJson" >> $GITHUB_OUTPUT
             echo "contents=`cat src/assets/locale/howdy.json`" >> $GITHUB_OUTPUT
       - run: |
