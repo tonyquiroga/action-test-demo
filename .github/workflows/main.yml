@@ -28,7 +28,7 @@ jobs:
             content=`cat src/assets/locale/howdy.json`
             echo "name=howdyJson" >> $GITHUB_OUTPUT
       - run: |
-          echo "${{join(steps.set_var.outputs.howdyJson)}}"
+          echo "${{steps.set_var.outputs.howdyJson}}"
       
       # - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       # - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
