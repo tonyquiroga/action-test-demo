@@ -36,11 +36,8 @@ jobs:
             echo "::error::HOWDYYYY"
       - name: Set environment variable
         run: |
-          echo 
-            { 
-              "ENVIRONMENT_VAR_GREETING=sup"
-              "ENVIRONMENT_VAR_NUMBER=11131989"
-            } >> $GITHUB_ENV
+          echo "ENVIRONMENT_VAR_GREETING=sup" >> $GITHUB_ENV
+          echo "ENVIRONMENT_VAR_NUMBER=11131989" >> $GITHUB_ENV
 
       - name: Use environment variable
         run: |
