@@ -43,7 +43,7 @@ jobs:
         run: |
           echo "The value of ENVIRONMENT_VAR_GREETING is $ENVIRONMENT_VAR_GREETING"
           echo "The value of ENVIRONMENT_VAR_NUMBER is $ENVIRONMENT_VAR_NUMBER"
-          printenv PATH
+          HOWDY="Hello World"
           printenv
       
       # - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
