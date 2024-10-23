@@ -30,6 +30,24 @@ jobs:
       - run: |
           echo "${{steps.another_var.outputs.name}}"
           echo "${{steps.another_var.outputs.contents}}"
+
+      - id: env-setup
+        run: |
+          {
+            "env_token=production"
+            "env_domain=example.com"
+          } >> $GITHUB_OUTPUT
+
+          {
+            echo "### Workflow variables"
+            echo "| Variable   | Value       |"
+            echo "| ---------- | ----------- |"
+            echo "| env_token  | $env_token  |"
+            echo "| env_domain | $env_domain |"
+          } >> $GITHUB_STEP_SUMMARY
+      - run: |
+          echo "${{ steps.env-setup.outputs.env_token }}"
+          echo "${{ steps.env-setup.outputs.env_domain }}"
       
       # - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       # - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
