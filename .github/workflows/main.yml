@@ -31,7 +31,7 @@ jobs:
       - run: |
           echo "${{steps.another_var.outputs.name}}"
           echo "$contents"
-          if [ "$contents" = "All te Contents" ]; then
+          if [ "$contents" = "All the Contents" ]; then
             echo "Strings are equal"
           else
             echo "Strings are not equal"
