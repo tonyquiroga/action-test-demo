@@ -27,11 +27,11 @@ jobs:
         run: |
             echo `cat src/assets/locale/howdy.json`
             echo "name=Tony" >> $GITHUB_OUTPUT
-            echo "contents='All the Contents'" >> $GITHUB_ENV
+            echo "contents=All the Contents" >> $GITHUB_ENV
       - run: |
           echo "${{steps.another_var.outputs.name}}"
           echo "$contents"
-          if [ "$contents" == "'All the Contents'" ]; then
+          if [ "$contents" == "All the Contents" ]; then
             echo "Strings are equal"
           else
             echo "Strings are not equal"
