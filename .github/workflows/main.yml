@@ -30,13 +30,8 @@ jobs:
       - run: |
           echo "${{steps.another_var.outputs.name}}"
           echo "${{steps.another_var.outputs.contents}}"
-
-      - id: env-setup
-        run: |
-          {
-            "env_token=production"
-            "env_domain=example.com"
-          } >> $GITHUB_OUTPUT
+      - name: Create annotation for build error
+        run: echo "::error file=app.js,line=1::Missing semicolon"
       
       # - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       # - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
