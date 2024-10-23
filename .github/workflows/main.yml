@@ -44,7 +44,6 @@ jobs:
           echo "The value of ENVIRONMENT_VAR_GREETING is $ENVIRONMENT_VAR_GREETING"
           echo "The value of ENVIRONMENT_VAR_NUMBER is $ENVIRONMENT_VAR_NUMBER"
           HOWDY="Hello World"
-          set | grep HOWDY
           printenv | grep HOWDY
       
       # - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
