@@ -30,7 +30,7 @@ jobs:
             echo "contents='All the Contents'" >> $GITHUB_ENV
       - run: |
           echo "${{steps.another_var.outputs.name}}"
-          echo "${{steps.another_var.outputs.contents}}"
+          echo "$contents"
       - name: Create annotation for build error
         run: |
             echo "::error file=app.js,line=1::Missing semicolon"
