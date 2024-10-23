@@ -34,6 +34,18 @@ jobs:
         run: |
             echo "::error file=app.js,line=1::Missing semicolon"
             echo "::error::HOWDYYYY"
+      - name: Set environment variable
+        run: |
+          echo 
+            { 
+              "ENVIRONMENT_VAR_GREETING=sup"
+              "ENVIRONMENT_VAR_NUMBER=11131989"
+            } >> $GITHUB_ENV
+
+      - name: Use environment variable
+        run: |
+          echo "The value of ENVIRONMENT_VAR_GREETING is $ENVIRONMENT_VAR_GREETING"
+          echo "The value of ENVIRONMENT_VAR_NUMBER is $ENVIRONMENT_VAR_NUMBER"
       
       # - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       # - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
